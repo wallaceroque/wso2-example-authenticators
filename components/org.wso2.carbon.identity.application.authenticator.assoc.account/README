@@ -1,0 +1,5 @@
+0. Shutdown WSO2 Identity Server if its already running.
+1. Buid this project and copy target/org.wso2.carbon.identity.application.authenticator.assoc.account-1.0.0.jar to IS_HOME/repository/components/dropins
+3. Start the Identity Server, and go to the corresponding Service Provider configuration -->  
+   Local and Outbound Authentication Configuration -> Select Advanced option -->
+
