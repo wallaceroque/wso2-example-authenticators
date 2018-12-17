@@ -32,21 +32,32 @@
 			<artifactId>org.wso2.carbon.identity.core</artifactId>
 			<version>5.7.5</version>
 		</dependency>
-		<!-- dependency>
-			<groupId>org.wso2.carbon</groupId>
-			<artifactId>org.wso2.carbon.identity.application.common</artifactId>
-			<version>4.2.0</version>
-		</dependency-->
-		<!-- dependency>
-			<groupId>org.wso2.carbon</groupId>
-			<artifactId>org.wso2.carbon.identity.application.authenticator.samlsso</artifactId>
-			<version>4.2.1</version>
+		<dependency>
+			<groupId>org.apache.axis2.wso2</groupId>
+			<artifactId>axis2</artifactId>
+			<version>1.6.1.wso2v4</version>
+			<!-- scope>system</scope>
+			<systemPath>${user.dir}/lib/axis2-1.6.1.wso2v4.jar</systemPath-->
 		</dependency>
 		<dependency>
-			<groupId>com.googlecode.json-simple.wso2</groupId>
-			<artifactId>json-simple</artifactId>
-			<version>1.1.wso2v1</version>
-		</dependency-->
+			<groupId>org.wso2.carbon</groupId>
+			<artifactId>org.wso2.carbon.um.ws.api.stub</artifactId>
+			<version>4.2.1</version>
+			<!-- scope>system</scope>
+			<systemPath>
+			${user.dir}/lib/org.wso2.carbon.um.ws.api.stub_4.2.1.jar
+			</systemPath-->
+		</dependency>
+		<dependency>
+		    <groupId>org.wso2.carbon</groupId>
+		    <artifactId>org.wso2.carbon.service.mgt.stub</artifactId>
+		    <version>4.2.0</version>
+		</dependency>
+		<!-- dependency> <groupId>org.wso2.carbon</groupId> <artifactId>org.wso2.carbon.identity.application.common</artifactId> 
+			<version>4.2.0</version> </dependency -->
+		<!-- dependency> <groupId>org.wso2.carbon</groupId> <artifactId>org.wso2.carbon.identity.application.authenticator.samlsso</artifactId> 
+			<version>4.2.1</version> </dependency> <dependency> <groupId>com.googlecode.json-simple.wso2</groupId> 
+			<artifactId>json-simple</artifactId> <version>1.1.wso2v1</version> </dependency -->
 	</dependencies>
 
 	<build>
@@ -90,11 +101,11 @@
 							*;resolution:=optional
 						</Import-Package>
 						<Private-Package>
-							org.wso2.custom.authenticator.local.internal,
+							org.wso2.carbon.identity.application.authenticator.assoc.account.internal,
 						</Private-Package>
 						<Export-Package>
-							!org.wso2.custom.authenticator.local.internal,
-							org.wso2.custom.authenticator.local.*;
+							org.wso2.carbon.identity.application.authenticator.assoc.account.internal,
+							org.wso2.carbon.identity.application.authenticator.assoc.account.*;
 							version="1.0.0"
 						</Export-Package>
 					</instructions>
